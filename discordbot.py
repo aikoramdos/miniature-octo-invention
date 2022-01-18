@@ -5,9 +5,7 @@ import traceback
 import smtplib
 from email.message import EmailMessage
 
-
-bot = commands.Bot(command_prefix='/')
-
+bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -15,13 +13,9 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-
 @bot.command()
-async def murata(ctx):
-    await ctx.send('mitsuru')
-    
-    
-
+async def ms(ctx):
+    await ctx.send('yay')
 
 token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
