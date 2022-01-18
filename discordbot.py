@@ -17,21 +17,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-    # Open the plain text file whose name is in textfile for reading.
-    print "test!!"
-    msg = EmailMessage()
-    msg.set_content("test")
-
-    msg['Subject'] = 'test message'
-    msg['From'] = "test@example.jp"
-    msg['To'] = "65108" + "@" + "aikogakuen.net"
-
-    # Send the message via our own SMTP server.
-    s = smtplib.SMTP('localhost')
-    s.send_message(msg)
-    s.quit()
+async def murata(ctx):
+    await ctx.send('mitsuru')
     
     
 
